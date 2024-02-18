@@ -1,0 +1,507 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */         
+  /* @import "component1.css";   Component-specific stylesheets, if any.   */
+  /* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
+  /*@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');*/
+  /*@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Nunito:wght@700&display=swap');*/
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,600&display=swap');
+
+/*   ----- Variables  -----  */
+:root {
+    --navy: #203959;
+    --dustyBlue: #698EBF;
+    --silverBlue: #D7DEF1aa;
+    --ceramic: #B5B09D;
+    --ceramicLight: #B5B09Daa;
+    --succulentGreen: #7C8A4D; 
+
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {}. */
+    /*background-color:;*/
+    background-image: url(images/stonehenge-england.jpg);
+    background-attachment: fixed;
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--navy);
+    font-family: "Nunito", sans-serif; /* Define with at least one font name and its related generic family name.*/
+    margin: 0 auto;
+    padding: 10px 20px 10px 20px;
+    max-width: 1200px;
+    /*width: 100%;*/
+    min-width: 50px;
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header img{
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0 2px 0 2px;
+
+  }
+
+  header {
+    background-color: var(--succulentGreen);
+    color: var(--ceramic);
+    margin: 0;
+    padding: 2%;
+    border-top: 2px solid var(--ceramic);
+  }
+
+  main {
+    background-color: var(--silverBlue);
+    margin: 0;
+    padding: 2%
+  }
+
+  section {}
+  article {
+    border-top: 1.5px solid var(--succulentGreen);
+  }
+    #webServers {}
+    #frontendDesign {}
+    #optimizeImages{}
+    #favicons{}
+  div {}
+  aside {}
+  footer {
+    background-color: var(--succulentGreen);
+    margin-top: 5px;
+    padding: 3%;
+    color: var(--ceramic);
+    border-bottom: 2px solid var(--ceramic);
+  }
+  
+  /* ----- Anchors ----- Text links */
+  a {
+   text-decoration: none;
+   color: var(--succulentGreen);
+  }
+
+  nav a {
+    font-size: 15px;
+    font-weight: 1.2rem;
+    padding: 3px 20px 5px 20px;
+    text-decoration:none;
+    margin-top: 2px;
+  }
+
+  nav a:link {
+    color: var(--succulentGreen);
+    background-color: var(--ceramic);
+  }
+  nav a:hover {
+    text-decoration: none;
+    background-color: var(--succulentGreen);
+    color: var(--ceramic)
+  }
+  nav a:active {
+    /*defaults to red when click*/
+  }
+  nav a:visited {
+    /*defaults to purple when user visited*/
+  }
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    flex-flow: row-wrap;
+  }
+ 
+  .global a{
+    background-color: var(--navy);
+    border-radius: 10px; 
+    margin-right: 5px;
+    color: var(--silverBlue)
+  }
+
+  .local{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 4px;
+    padding: 0;
+    margin: 0;
+    background-color: var(--ceramic);
+    min-width: auto;
+    max-width: auto;
+  }
+
+  
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {}
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Merriweather", sans-serif;
+    font-weight: 800;
+  } 
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {
+    border-collapse: collapse;
+    width: 100%; /* 100% of the parent block it is sitting in */
+    /*max-width: 80%; or use max-width */
+    margin: 0 auto; /* have table sit in the middle */
+    table-layout: fixed;
+  }
+  caption {
+    background-color: var(--ceramicLight);
+    border-bottom: 3px dashed var(--succulentGreen);  
+    color: var(--succulentGreen);
+    font-weight:bold;
+    padding:1% 0;
+  }
+  thead {}
+  tbody {}
+  tfoot {}
+  tr {
+    border-bottom: 1px dashed var(--succulentGreen);
+  }
+    tr:nth-child(even) {}
+
+  th {
+    color: var(--navy);
+    border-bottom: 2px dashed var(--succulentGreen);
+    display: in-line flex;
+    justify-content: space around;
+  }
+
+  td {
+    color: var(--navy);
+    text-align: left;
+    padding: 3% 5% 3% 2%;
+  }
+    td:nth-child(1) {
+      
+    }
+
+  tr th {
+    background-color: var(--ceramicLight);
+    border-bottom: 2px dashed var(--succulentGreen);
+    padding: 5% 3% 5% 2%;
+    text-align: left; 
+  } 
+
+  tr td{
+    margin: 5% 0 5% 0;
+    background-color: var(--ceramicLight);
+    border-bottom: 1px dashed var(--succulentGreen);
+    padding: 5% 3% 5% 2%;
+  }
+
+  tr:nth-child(odd) td {
+    background-color: var(--ceramic);
+  }
+
+
+
+  #catScratcherBall {
+    margin: 0 5% 0 5%;
+  }
+
+  #dogPool {
+    margin: 0 5% 0 5%;
+  }
+
+  #dogFence {
+    margin: 0 5% 0 5%;
+  }
+
+  #backpack {
+    margin: 0 5% 0 5%;
+    flex-wrap: nowrap;
+  }
+
+  #wheel {
+    margin: 0 5% 0 5%;
+  }
+
+  .order {
+    background-color: var(--ceramic);
+    color: var(--succulentGreen);
+  }
+
+  button[type="submit"]:hover {
+    background-color: var(--succulentGreen);
+    color: var(--ceramic);
+  }
+
+  colgroup {}
+  data {}
+  datalist {}
+  
+  
+  /*  ----- Form ----- */
+  form {
+    display: flex;
+  }
+  
+  button, input, select, textarea {
+    font-family: inherit;
+    padding: 1.5%;
+    font-size: 12px;
+    margin: 2px;
+  }
+
+  fieldset {
+    border: 2px solid var(--ceramic);
+    background-color: var(--ceramicLight);
+    margin-bottom: 3%; 
+    padding: 2%;
+    width: 45%;
+  }
+
+  legend {
+    background-color: var(--ceramicLight);
+    border-top: 2px solid var(--ceramicLight);
+    color: var(--succulentGreen);
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  label {
+    display: block;
+    margin-top: 2%;
+    font-size: 15px;
+  }
+
+  input {
+    margin: 2px 0 2px 2px;
+    border-style: inset;
+    border-color: var(--succulentGreen);
+    border-top: 2px solid var(--ceramic);
+    border-left: 2px solid var(--ceramic);
+  }
+
+  input[type="text"]{
+    display: block;
+  }
+
+  input[type="email"] {
+    display: block;
+  }
+
+  input[type="radio"]{
+    margin: 0 4px 0 0;
+  }
+
+  button[type="send"]:hover {
+    background-color: var(--ceramic);
+    color: var(--succulentGreen);
+  }
+
+  button {
+    background-color: var(--succulentGreen);
+    color: var(--ceramic);
+    border-radius: 3px;
+    margin: 3px;
+    padding: 10px;
+
+  }
+
+  input::placeholder {
+    color: var(--dustyBlue);
+  }
+
+  select {
+    color: var(--navy);
+    margin: 5px 0 5px 0;
+    padding: 1.5px 0 1.5px 0;
+    border-color: var(--succulentGreen);
+  }
+    optgroup {}
+    option {
+    }
+
+  textarea {
+    height: 75px;
+    width: 180px;
+    margin: 2px 0 2px 2px;
+    padding: 3px 0 0 3px;
+    border-color: var(--succulentGreen);
+  }
+
+  #instructions {
+    height: 180px;
+    width: 200px;
+  }
+
+  textarea::placeholder {
+    color: var(--dustyBlue);
+  }
+
+  output {}
+  meter {}
+  progress {}
+  
+  
+  /* ----- Media ----- */
+  figure {}
+    figcaption {}
+    figure img {}
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  
+  /* ---- Staff Page Table ----*/
+  table img {
+    height: 80px;
+    border: 3px solid var(--silverBlue);
+  }
+
+  aside {
+    width: 20%;
+    padding-left: 15px;
+    margin-left: 50px;
+    display: inline-block;
+    background-color: var(--silverBlue);
+  }
+
+  #statusHeader {
+    font-size: 15px;
+  }
+
+  #accepted {
+    font-style: italic;
+  }
+
+  .staffPage {
+    display: inline-block;
+  }
+  
+  /* ---- Mailto ---- */
+  a:link {
+    color: var(--dustyBlue);
+  }
+  a:hover {
+    color: var(--navy);
+    background-color: var(--succulentGreen);
+  }
+
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: var(--silverBlue)
+  }
+  
+  .gallery figure {
+    width: 320px;
+    margin: 2%;
+    padding: 5px;
+    border: 2px solid var(--succulentGreen);
+    border-radius: 10px;
+  }
+
+  .gallery img {
+    width: 100%
+  }
+
+  .gallery figcaption {
+    display: block;
+    padding: 10px;
+  }
+
+/* ---- MERN Stack Ingredient's List ----*/
+#addIngredient {
+  display: flex;
+  justify-content: flex-end;
+  border: 3px dashed var(--navy);
+  color: var(--navy);
+  width: 150px;
+  height: 40px;
+  margin: 10px;
+  padding: 0 10px 10px 0;
+}
+
+#delete {
+  height: 30px;
+  width: 40px;
+}
+
+#edit {
+  height: 28px;
+  width: 30px;
+}
+
+
+
+
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
+  

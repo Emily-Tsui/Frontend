@@ -1,4 +1,4 @@
-# Frontend
+# Frontend Portfolio
 Frontend portion of my simple website created using 
   - React.js
   - HTML

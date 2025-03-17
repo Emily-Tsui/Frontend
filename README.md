@@ -2,7 +2,7 @@
 Frontend portion of a CRUD app using:
   - React.js
   - HTML
-  - CSS.
+  - CSS
 
 Project was created invididually for my web development class. 
 
